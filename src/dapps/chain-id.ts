@@ -15,6 +15,7 @@ export enum ChainId {
   MATIC_MAINNET = 137,
   MATIC_MUMBAI = 80001,
   BSC_MAINNET = 56,
+  BSC_TESTNET=97
 }
 
 /**
@@ -39,6 +40,8 @@ export function getChainName(chainId: ChainId): ChainName | null {
       return ChainName.MATIC_MUMBAI
     case ChainId.BSC_MAINNET:
       return ChainName.BSC_MAINNET
+    case ChainId.BSC_TESTNET:
+      return ChainName.BSC_TESTNET
     default:
       return null
   }
@@ -66,6 +69,8 @@ export function getURNProtocol(chainId: ChainId): string {
       return 'mumbai'
     case ChainId.BSC_MAINNET:
       return 'bscmainnet'
+    case ChainId.BSC_TESTNET:
+      return 'bsctestnet'
   }
 }
 
