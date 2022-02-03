@@ -13,7 +13,8 @@ export enum ChainId {
   ETHEREUM_GOERLI = 5,
   ETHEREUM_KOVAN = 42,
   MATIC_MAINNET = 137,
-  MATIC_MUMBAI = 80001
+  MATIC_MUMBAI = 80001,
+  BSC_MAINNET = 56,
 }
 
 /**
@@ -36,6 +37,8 @@ export function getChainName(chainId: ChainId): ChainName | null {
       return ChainName.MATIC_MAINNET
     case ChainId.MATIC_MUMBAI:
       return ChainName.MATIC_MUMBAI
+    case ChainId.BSC_MAINNET:
+      return ChainName.BSC_MAINNET
     default:
       return null
   }
@@ -61,6 +64,8 @@ export function getURNProtocol(chainId: ChainId): string {
       return 'matic'
     case ChainId.MATIC_MUMBAI:
       return 'mumbai'
+    case ChainId.BSC_MAINNET:
+      return 'bscmainnet'
   }
 }
 
