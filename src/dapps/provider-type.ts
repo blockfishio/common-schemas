@@ -6,9 +6,11 @@ import { generateValidator, JSONSchema, ValidateFunction } from '../validation'
  */
 export enum ProviderType {
   INJECTED = 'injected',
-  FORTMATIC = 'formatic',
+  // FORTMATIC = 'formatic',
   NETWORK = 'network',
-  WALLET_CONNECT = 'wallet_connect'
+  WALLET_CONNECT = 'wallet_connect',
+  FORTMATIC_ETH = "fortmatic-eth",
+  FORTMATIC_BSC = "fortmatic-bsc",
 }
 
 /**
